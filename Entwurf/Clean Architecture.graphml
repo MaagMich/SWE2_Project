@@ -521,6 +521,17 @@
                             </y:ShapeNode>
                           </data>
                         </node>
+                        <node id="n0::n6::n0::n3::n16::n7">
+                          <data key="d6">
+                            <y:ShapeNode>
+                              <y:Geometry height="50.0" width="100.0" x="345.5924626729292" y="1990.2076527462323"/>
+                              <y:Fill color="#FF6600" transparent="false"/>
+                              <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+                              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#000000" verticalTextPosition="bottom" visible="true" width="60.6953125" x="4.0" xml:space="preserve" y="4.0">FixedPoint</y:NodeLabel>
+                              <y:Shape type="roundrectangle"/>
+                            </y:ShapeNode>
+                          </data>
+                        </node>
                       </graph>
                     </node>
                     <node id="n0::n6::n0::n3::n17">
@@ -2105,7 +2116,6 @@ Receiver</y:NodeLabel>
     </edge>
     <edge id="n0::n6::n0::e13" source="n0::n6::n0::n5" target="n0::n6::n0::n1">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2117,7 +2127,6 @@ Receiver</y:NodeLabel>
     </edge>
     <edge id="n0::n6::n0::e14" source="n0::n6::n0::n5" target="n0::n6::n0::n3::n19">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2128,6 +2137,29 @@ Receiver</y:NodeLabel>
       </data>
     </edge>
     <edge id="n0::n6::n0::n3::e30" source="n0::n6::n0::n3::n19" target="n0::n6::n0::n3::n16::n4">
+      <data key="d8" xml:space="preserve"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="n0::n6::n0::n3::n16::e5" source="n0::n6::n0::n3::n16::n0" target="n0::n6::n0::n3::n16::n7">
+      <data key="d8" xml:space="preserve"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="n0::n6::n0::n3::n16::e6" source="n0::n6::n0::n3::n16::n2" target="n0::n6::n0::n3::n16::n7">
       <data key="d8" xml:space="preserve"/>
       <data key="d9"/>
       <data key="d10">
