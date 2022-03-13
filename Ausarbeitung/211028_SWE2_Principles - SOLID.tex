@@ -12,32 +12,87 @@
 \missing[Hier evtl eine Tabelle mit allen Klassen (nach Layer und Alphabet geordnet?) und dem von uns definierten Zweck?]
 
 
+Beispiel: Klassen aus DroneController\_pkg mit jeweiligen Aufgaben beschreiben.
+=> Michael
+
 
 
 
 \newSec[PrincSOLIDOC]{Open/Closed Principle}{3}
 
+\missing[Vorlesung Sem5 VL xx]
 
+Offen für Erweitgerung. Geschlosen gegenüber Veränderungen.
+
+\missing[TODO: VORLESUNG ANHÖREN!]
 
 Beispiel: Value und TimedValue ??
 
 Beispiel: Der ganze Input/Output Kram für die Controller
 
+Beispiel Closed: ControllerSystem
 
+Gegenbeispiel: Integral1 und Integral2, Erklärung: zu Aufwändig und idR nicht benötigt in diesem Anwendungsfall.
 
 
 \newSec[PrincSOLIDLisk]{Liskov Substitution Principle}{3}
-Hier als Beispiel das Controller-Array in ControllerSystem
+
+\missing[Vorlesung Pricipals Folie 23.]
+
+Kompletter Code ist theoretisch Kovariant.
+
+Hier als Beispiel das Controller-Array in ControllerSystem.
 
 
 
 
 \newSec[PrincSOLIDInter]{Interface Segregation Principle}{3}
 
+implizit Single responsibility.
+
+Klient soll nur das gezeigt bekommen, was er tatsächlich auch benötigt.
+
+Beispiel: DroneController\_pkg
+
+
+
+
 
 
 \newSec[PrincSOLIDDep]{Dependency Inversion Principle}{3}
 
+
+
 \missing[Transmitable in PoseController]
+
+Die Brücke.
+
+IMUable => PoseBuilder
+PoseControlable => parrotTransmitter
+
+
+PoseControlable ist zwar maßgeblich virtual, aber implenentiert eine Methode (transmitAction). Damit sind wir uns unklar, ob das noch als dependecy inversion zählt.
+Auch so bei DroneControlable => parrotStatus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
