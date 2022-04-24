@@ -1,26 +1,10 @@
 \newSec[MusterObserver]{Beobachter}{3}
 
-\missing[hier einfach mal ROS blabla. evtl von der ROS Homepage übersetzen und so]
-
-
-
-
-
-
-
-
-
-
-
-
-
 \newSec{Klassifikation}{4}
+Objektbasiertes Verhaltensmuster\footnote{Anhand der Vorlesungsfolien \glq Entwurfsmuster Beobachter\grq}
 
-
-
-
-\newSec{Struktur und beteiligte Akteure}{4}
-
+\clearpage
+\newSec{Struktur}{4}
 \begin{figure}[ht!]
 \vspace{0.25cm}
 \begin{center}
@@ -30,25 +14,27 @@
 \end{center}
 
 \vspace{0.25cm}
-\refImgShort{fig:Obs} zeigt \missing\
+Im \ROS-Framework wird die Funktionalität mittels \textit{Function Pointer} an den Beobachter übertragen. Eine Vererbung findet nicht statt.\\
+\note{Die in der Abbildung als \glqq MagicUnicorn\glqq bezeichnete Klasse ist in diesem Zusammenhang die Untiefen des \ROS-Frameworks, welches deutlich über das im verfügbaren Zeitraum aufbringbare Verständnis der Autor:innen hinausgeht.}
 \end{figure}
 
 
+\FloatBarrier
+\newSec[Akteure]{Akteure\footnotemark[5]}{4}
+\begin{table}[!ht]
+\begin{tabular}{ll}
+Akteur				& Klassenbezeichnung \\ \hline
+Subjakt				& ros::Publisher\\
+KonkretesSubjekt		& parrotTransmitter\\
+Beobachter			& ros::Subscriber\\
+KonkreterBeobachter 0	& parrotIMU\\
+KonkreterBeobachter 1	& parrotStatus\\
+KonkreterBeobachter 2	& parrotBattery
+\end{tabular}
+\end{table}
 
+
+\FloatBarrier
 \newSec{Motivation}{4}
-\missing[Ist halt Grundlage von ROS]
+Die \ROS-\Pub{} und \Sub{} kommunizieren über \Topic[s] miteinander. \comp{ROSObserer1} Die Drohne ist ausschließlich mittels \ROS\ erreichbar.
 
-
-Die \ROS-\Pub\ und \Sub\ kommunizieren über \Topic[s] miteinander. 
-
-
-
-\comp{ROSObserer1}
-
-
-The  and the turtleteleopkey node are communicating with each other over a ROS Topic. 
-turtleteleopkey is publishing the key strokes on a topic, while turtlesim subscribes to the same topic to receive the key strokes. 
-
-\missing[evtl überarbeiten ;)]
-Alles, was wir nicht verstanden haben (oder nicht genauer erörtern wollten) wird durch den Platzhalter \textcolor{pink}{\textit{MagicUnicorn}} veranschaulicht.
-Ernsthaft, bei Nachfragen selbst mal den ROS-Jungel durchkämmen.

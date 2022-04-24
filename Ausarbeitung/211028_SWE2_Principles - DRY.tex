@@ -1,31 +1,23 @@
 \newSec[PrincDRY]{DRY}{2}
-
-Don't repeat yourself
-
-Aus aufwändiger Domain-Architektur ergibt sich, dass das umgesetzt wurde => viele kleine Klassen.
-
-
-
-Sichtbar beonders in der Umsetzung von Full Virtual Klassen (Interfaces in Java) und darauf aufbauend Klassen, die diese Methoden implementieren.
-Beide werden in \glq höherwertigen\grqq Klassen eingesetzt. \zB\ Outputable und Output.
+Dieses Prinzip fördert das Schonen von Ressourcen. Daher wurde dieses Prinzip in großen Teilen des zugrundeliegenden Code angewandt.\\
+Sichtbar ist dies beondersbei Vererbung, da bereits vorhandene Funktionalität aus der Basisklasse übernommen wird und keine Neuimplementierung dieser stattfindet.
+\zB\\
+\CodeClass{TimedValue } erbt von \CodeClass{Value} und \CodeClass{Timestamp}, wobei nur wenige notwendige Funktionen (Konstruktoren und einfache Arithmetik) hinzugefügt werden.
+https://github.com/MobMonRob/ROSLabDrohne/blob/fe35195d45d7246eacdac0165036204d47e10ed6/Code/Domain/include/Domain/TimedValue.h
+https://github.com/MobMonRob/ROSLabDrohne/blob/fe35195d45d7246eacdac0165036204d47e10ed6/Code/Domain/include/Domain/Value.h
+https://github.com/MobMonRob/ROSLabDrohne/blob/fe35195d45d7246eacdac0165036204d47e10ed6/Code/Domain/include/Domain/Timestamp.h
 
 
-
-We DRY nicht anwendet, ist halt bescheudert - weil faule Menschen wollen doch nicht extra Mehrarbeit.
-\missing[evtl andere fragen, wie hier argumentiert wurde]
+Negativ Beispiel siehe \refCap{RefaSmellDup}.
 
 
+\newSec[PrincDRYProof]{Nachweis}{4}
+Um die getroffene positiv-Aussage zu bestätigen, sollte an dieser Stelle ein Nachweis mit einem geeigneten \textit{Duplication Checker}-Tool eingebracht werden.
+Leider war es den Autor:innen nicht möglich, dies mit geeignetem Erfolg umzusetzen. Wir bitten an dieser Stelle um Anerkennung der Bemühungen.
 
+\begin{itemize}
+\item http://www.ccfinder.net/ccfinderxos.html (nicht ausführbar)
+\item https://pmd.github.io/latest/pmd\_userdocs\_cpd.html (zu aufwändig)
+\item https://github.com/Acumatica/AntiPlagiarism (leider nur c\#)
+\end{itemize}
 
-
-
-\missing[Umsetzung mit Duplication Checker Tool]
-
-
-https://cppdepend.com/blog/?p=556
-
-
-
-Duplication
-\Commit{edd7726743b9eb67e159112919224d54c54be670}
-für die \CodeClass{FixedPoint<T>}

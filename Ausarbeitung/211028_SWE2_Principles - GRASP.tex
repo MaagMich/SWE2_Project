@@ -2,13 +2,17 @@
 
 
 \newSec[PrincGRASPKopp]{Kopplung}{3}
+Der Einsatz von \ROS\ deutet an dieser Stelle auf eine lose Kopplung hin (siehe \refCap{MusterObserver}).\footnote{vgl. Vorlesungsfolien \glq Programming Principles\grq (Seite 50)} 
+
+Durch polymorphe Methodenaufrufe liegt eine mäßige Kopplung vor. Dies wurde in der \CodeClass{ControllerSystem} der \CodeMeth{addController} umgesetzt.
+https://github.com/MobMonRob/ROSLabDrohne/blob/8b5d30dbdfbd41a7e10fa8d512db42cad5bb6d16/Code/Controller/include/Controller/ControllerSystem.h\#L28 ff.
+
+Abgesehen von den genannten Punkten ist der zugrundeliegende Code eher stark gekoppelt, da häufig statische Methodenaufrufe sowie Methodendefinitionen verwendet werden.
 
 
-PoseController ist ein Monolith.
 
-ROS ist strukturell sehr lose gekoppelt (verschiedene Prozesse, die mit Topics (Observer) miteinander komunizieren).
 
-Brücke ist eher lose gekoppelt.
+Brücke ist eher lose gekoppelt. \missing[prüfen!]
 
 
 
