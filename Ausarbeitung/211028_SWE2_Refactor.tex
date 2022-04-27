@@ -17,12 +17,12 @@ Wie bereits in \refCap{PrincDRY} angemerkt, findet sich Code-Duplikate im Code:
 \zB\\
 \CodeMeth{operator+(const FixedPoint<TIn>\& FP) [const]} (mutable und const Spezifizierer)\\
 Identischer Code ist in nachfolgend genannten Methoden vorhanden.\\
-https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h\#L145
-https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h\#L157
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h\#L145}{Link: Domain/FixedPoint.h\#L145}\\
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h\#L157}{Link: Domain/FixedPoint.h\#L157}
 
 
 \newSec[RefaSmellLong]{Long Method}{3}
-https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/PosControl/src/PoseBuilder.cpp\#L68
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/PosControl/src/PoseBuilder.cpp\#L68}{Link: PosControl/PoseBuilder.cpp\#L68}
 \Commit{73f3400f4866b27200a37be5d3a80fa8394b2c48}\\
 \CodeClass{PoseBuilder}, \CodeMeth{updatePose}
 
@@ -32,7 +32,7 @@ Wie innerhalb der Methode ersichtlich ist wird ein manipulierender Code durch ei
 
 
 \newSec[RefaSmellLarge]{Large Class}{3}
-https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/73f3400f4866b27200a37be5d3a80fa8394b2c48/Code/Domain/include/Domain/FixedPoint.h}{Link: Domain/FixedPoint.h}
 \Commit{73f3400f4866b27200a37be5d3a80fa8394b2c48}\\
 \CodeClass{FixedPoint<T>}
 
@@ -43,27 +43,25 @@ Nach unserer subjektiven Definition ist eine Klasse ab 15 Methoden eine \textit{
 \newSec[RefaSmellComments]{Code Comments}{3}
 An deiser Stelle sollen lediglich Links aufgezählt werden.
 \begin{itemize}
-\item https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/TimedValue.cpp\#L17\\
+\item \href{https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/TimedValue.cpp\#L17}{Link: Domain/TimedValue.cpp\#L17}\\
 ToDo-Kommentar, nicht in den Code!
 
-\item https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/TimedValue.cpp\#L39\\
+\item \href{https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/TimedValue.cpp\#L39}{Link: Domain/TimedValue.cpp\#L39}\\
 ToDo-Kommentar, nicht in den Code!
 
-\item https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/PosControl/src/PoseBuilder.cpp\#L103\\
+\item \href{https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/PosControl/src/PoseBuilder.cpp\#L103}{Link: PosControl/PoseBuilder.cpp\#L103}\\
 impliziter ToDo-Kommentar, nicht in den Code!
 \end{itemize}
 
 Informative Comments und damit sinnvoll:
 \begin{itemize}
-\item https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/Vector3D.cpp\#L99
-\item https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/DroneController/src/Rotor.cpp\#L26
+\item \href{https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/Domain/src/Vector3D.cpp\#L99}{Link: Domain/Vector3D.cpp\#L99}
+\item \href{https://github.com/MobMonRob/ROSLabDrohne/blob/d39df8957ec8659b8a6683d8d8ba853db01a82ff/Code/DroneController/src/Rotor.cpp\#L26}{Link: DroneController/Rotor.cpp\#L26}
 \end{itemize}
-
-\missing[hier Links statt der kompletten URI]
 
 
 \newSec[RefaSmellSwitch]{Switch Statement}{3}
-https://github.com/MobMonRob/ROSLabDrohne/blob/3c5aeed610150bd19f75241af48a2777cb4c582a/Code/PosControl/src/MainClass.cpp\#L67
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/3c5aeed610150bd19f75241af48a2777cb4c582a/Code/PosControl/src/MainClass.cpp\#L67}{Link: PosControl/MainClass.cpp\#L67}
 \Commit{3c5aeed610150bd19f75241af48a2777cb4c582a}\\
 \CodeClass{MainClass} \CodeMeth{callbackKeys}
 
@@ -83,26 +81,26 @@ Angewandt auf die in \refCap{RefaSmellLong} beschriebene Methode.\\
 
 Hier waren semantisch gekapselte Aufgaben innerhalb einer Methode vorhanden. Diese wurden in separate Methode ausgelagert und nachfolgend der Aufruf der Use Cases.\\
 vorher:\\
-https://github.com/MobMonRob/ROSLabDrohne/blob/ea7d3d0640e8cde5156c6604e2432fa71061914b/Code/PosControl/src/PoseBuilder.cpp\#L71
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/ea7d3d0640e8cde5156c6604e2432fa71061914b/Code/PosControl/src/PoseBuilder.cpp\#L71}{Link: PosControl/PoseBuilder.cpp\#L71}
 
 nacherher:\\
-https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L71
-https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L94
-https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L108
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L71}{Link: PosControl/PoseBuilder.cpp\#L71}\\
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L94}{Link: PosControl/PoseBuilder.cpp\#L94}\\
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/9dd6821a9c63bf1682806b8ab319d6004247d3ca/Code/PosControl/src/PoseBuilder.cpp\#L108}{Link: PosControl/PoseBuilder.cpp\#L108}
 
 
 \newSec[RefaRefaRename]{Rename Class}{3}
 In der Vorlesung wird das Umbenennen einer Methode angesprochen. Ziel ist hier, die Verständlichkeit des Codes zu erhöhen.
-In dem dieser \Arbeit\ zugrundeliegenden Code wurden Klassen gefunden, bei welchen die Bezeichnung nicht selbstsprechend erscheint. Um dieser Problematik entgegenzuwirken, soll eine dieser betreffenden Klassen umbenannt werden. Hierbei handelt es sich um die Klasse \CodeClass{PosBridge} nach  \CodeClass{MainClass}.\\
+In dem dieser \Arbeit\ zugrundeliegenden Code wurden Klassen gefunden, bei welchen die Bezeichnung nicht selbstsprechend erscheint. Um dieser Problematik entgegenzuwirken, soll eine dieser betreffenden Klassen umbenannt werden. Hierbei handelt es sich um die \CodeClass{PosBridge} nach  \CodeClass{MainClass}.\\
 \Commit{3c5aeed610150bd19f75241af48a2777cb4c582a}\\
-https://github.com/MobMonRob/ROSLabDrohne/blob/3c5aeed610150bd19f75241af48a2777cb4c582a/Code/PosControl/src/MainClass.cpp
+\href{https://github.com/MobMonRob/ROSLabDrohne/blob/3c5aeed610150bd19f75241af48a2777cb4c582a/Code/PosControl/src/MainClass.cpp}{Link: PosControl/MainClass.cpp}
 
 
 
 
 \newSec[RefaRefaDeleg]{Interface Extraction}{3}
 Da sich die Hardware (Drohnen-PlugIn) im Projektverlauf geändert hat, wurde diese Chance genutzt, eine Bridge einzuführen. Dies hatte den Hintergrund, einen Umstieg auf andere Hardware zukünfitig zu erleichtern.
-Hierzu sind diverse, \tw\ virtuelle\footnote{\textit{virtuelle} Klassen in der Sprache c++ entsprechen \textit{abstrakten} Klassen in Java.}, Klassen entstanden.
+Hierzu sind diverse, \tw\ virtuelle\footnotemark[1], Klassen entstanden.
 
 \Commit{2b1bccb0f9b2671ace7fb91b6ed86e2be2284596}
 
