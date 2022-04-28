@@ -1,0 +1,26 @@
+\newSec[DDDEntities]{Entities}{2}
+Nachfolgend werden die \textit{Entites} aus \refImg{fig:DomainMod} beschrieben.
+
+
+\newSec[DDDEntitiesDrone]{Drone}{4}
+Das Objekt \textit{Drone} bildet die physische Drohne ab. Das physisch vorhandene Pendant kann Zustände ändern (ruhend, fliegend, verunfallt), so auch das Objekt der Domäne. 
+
+
+\newSec[DDDEntitiesData]{Data Output}{4}
+In dem Objekt \textit{Data Output} werden Posen aus Beschleunigungsdaten und der Ausrichtung der Drohne erzeugt. Es handelt sich hier explizit nicht um eine \textit{Pure Fabrication} (\textit{Factory}), da hier eine Funktionalität der Drohne (Übergabe von Beschleunigungsdaten und Ermittlung der lokalen Pose) umgesetzt wird. Diese Funktionalität ist für die Domäne essentiell.
+Für die Umrechnung von Beschleunigungsdaten zu einer Position werden Integrale gebildet und somit Zustände zur Laufzeit verändert. Dies erhebt das Objekt \textit{Data Output} zu einem \textit{Entity}.
+
+
+\newSec[DDDEntitiesController]{Controller}{4}
+Im \textit{Controller}-Objekt werden entsprechend regelungstechnischer Ansätze Stellgrößen gebildet. Hierzu werden im Allgemeinen \textit{PID-Regelglieder} eingesetzt, diese enthalten ein integralbildendes Regelglied. Hieraus folgt, wie bereits für das Objekt \textit{Data Output} angemerkt, die Eigenschaft als \textit{Entity}.
+
+
+
+
+
+
+
+
+
+
+

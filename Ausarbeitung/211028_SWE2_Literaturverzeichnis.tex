@@ -1,0 +1,62 @@
+\clearpage
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\newcounter{IndexLiteratur}
+\newcommand{\NewBibItem}[2]{\stepcounter{IndexLiteratur} \bibitem[\theIndexLiteratur]{#1} #2,\newline}
+
+% Layout Commands
+\newcommand{\Published}[1]{veröffentlicht #1}
+\newcommand{\Modified}[1]{verändert #1}
+\newcommand{\Requested}[1]{abgefragt #1}
+\newcommand{\Online}[1]{online,  #1\newline}
+\newcommand{\Version}[1]{#1. Auflage}
+\newcommand{\ISBN}[1]{ISBN #1}
+\newcommand{\Article}[1]{Artikel \textit{#1}}
+\newcommand{\Pages}[1]{Seite #1}
+\newcommand{\NA}{-unbekannt-}
+
+
+
+\begin{thebibliography}{\theIndexLiteratur}
+
+%Bücher
+
+
+
+% Einleitung
+
+
+
+
+
+
+%ROS
+\NewBibItem{ROS}{ROS - Robot Operating System}
+\Online{http://ros.org}
+\Published{\NA}, \Requested{10.04.2022}
+
+
+\NewBibItem{ROSObserer1}{Understanding ROS Topics}
+\Online{http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics}
+\Published{\NA}, \Modified{18.07.2019}, \Requested{27.03.2022}
+
+
+
+%Testing
+\NewBibItem{gmockFAQ}{Legacy gMock FAQ}
+\Online{https://google.github.io/googletest/gmock\_faq.html}
+\Published{\NA}, \Requested{22.04.2022}
+
+
+
+
+
+
+
+
+
+
+\end{thebibliography}
+
+\Anmerkung{Wird hier ein Veröffentlichungsdatum als \grqq -unbekannt-\grqq\ markiert, so konnte diese Angabe weder auf der entsprechenden Webseite, noch in deren Quelltext ausfindig gemacht werden.}
+
+\clearpage
