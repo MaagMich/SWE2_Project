@@ -111,33 +111,30 @@ Beispiel im Code: Zeilenanzahl > 25 Zeilen\\ \href{https://github.com/MobMonRob/
 
 
 \newSec[TestCover]{Code Coverage}{3}
+Um die \textit{Code Coverage} des Codes zu messen, wurde das Tool \href{https://github.com/atlaste/CPPCoverage}{CPPCoverage} eingesetzt. Hierbei handelt es sich um eine Erweiterung der eingesetzten IDE. Die vom Hersteller angebotene Erweiterung \textit{Coverlet} ist nur für die \textit{Enterprise}-Version der IDE freigegeben.
 
+Die Auswertung des Tools beschränkt sich auf \textit{Line Coverage} und beschreibt diese innerhalb der einzelnen Dateien (siehe \refImg{fig:Cover}). Sofern eine abschließende Auswertung gewünscht ist, muss diese von Nutzenden für das gesamte getestete Projekt berechnet werden.
 
-\missing[Reka fragen]
+\begin{figure}[ht!]
+\vspace{0.25cm}
+\begin{center}
+\fbox{\includegraphics[width=15cm]{Pictures/CodeCoverage.png}}
+\caption{Code Coverage Report}
+\label{fig:Cover}
+\end{center}
 
+\vspace{0.25cm}
+Der Report beschreibt den \textit{Coverage}-Bestimmung für das \textit{Domain}-Package. Die Tests sind paketweise getrennt.\\
+Die getesteten Zeilen werden in den Dateien grün, die ungetesteten rot, eingefärbt.\\
+Im Report werden alle von diesem Testlauf berührten Dateien aufgelistet. Die Einfärbung der Dateien im Report ist abhängig von der prozentualen Test-Abdeckung. 
+In \refImgShort{fig:Cover}
+\end{figure}
 
-using \texttt{coverlet} with \texttt{Visual Studio}
-
-
-
-\newSec[TestCoverStart]{Getting Started}{4}
-\begin{itemize}
-\item installiere Microsoft.NET.Sdk
-\item installiere Microsoft.NET.Test.Sdk (NuGet.org)
-
-
-
-\end{itemize}
-
-
-using \texttt{Google Test} with \texttt{Visual Studio}
-
-
-
+Durchführung der Bestimmung der Testabdeckung auf folgendem Commit:\\
+\Commit{83c6ff44f67ce1185056a88f00b23e00833a60fb}
 
 
 \newSec[TDD]{TDD}{2}
-
 \textit{Test Driven Development} (\textit{TDD}) ist ein Prozess in der Software-Entwicklung, wonach jede Klasse \bzw\ Funktion im produktiven Code bereits im Vorfeld durch einen Test abgedeckt wird.
 
 Hierbeit unterscheidet sich das \textit{TDD} von \textit{Test First} dadurch, dass \textit{TDD} lediglich jeweils einen Test vor dem produktiven Code liegt, wobei \textit{Test First} eine beliebige Anzahl an Tests bereitstellen kann, bevor produktiver Code entsteht.
