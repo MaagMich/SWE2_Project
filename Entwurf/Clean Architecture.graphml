@@ -268,7 +268,7 @@
                           <y:Shape type="roundrectangle"/>
                           <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
                           <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-                          <y:BorderInsets bottom="0" bottomF="0.0" left="8" leftF="8.364342215988813" right="0" rightF="0.0" top="32" topF="32.01472089761569"/>
+                          <y:BorderInsets bottom="2" bottomF="2.103515625" left="8" leftF="8.364342215988813" right="0" rightF="0.0" top="32" topF="32.01472089761569"/>
                         </y:GroupNode>
                         <y:GroupNode>
                           <y:Geometry height="50.0" width="50.0" x="0.0" y="60.0"/>
@@ -406,19 +406,6 @@
                         </y:ShapeNode>
                       </data>
                     </node>
-                    <node id="n0::n0::n0::n1::n11">
-                      <data key="d6">
-                        <y:ShapeNode>
-                          <y:Geometry height="50.0" width="100.0" x="1425.0" y="2300.0"/>
-                          <y:Fill color="#00CCFF" transparent="false"/>
-                          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-                          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#000000" verticalTextPosition="bottom" visible="true" width="62.67578125" x="4.0" xml:space="preserve" y="4.0">Resetable
-(full virtual)
-??</y:NodeLabel>
-                          <y:Shape type="roundrectangle"/>
-                        </y:ShapeNode>
-                      </data>
-                    </node>
                   </graph>
                 </node>
               </graph>
@@ -477,7 +464,7 @@
               <y:Geometry height="50.0" width="100.0" x="2175.0" y="700.0"/>
               <y:Fill color="#BFF235" transparent="false"/>
               <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#000000" verticalTextPosition="bottom" visible="true" width="70.017578125" x="4.0" xml:space="preserve" y="4.0">PosBridge
+              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#000000" verticalTextPosition="bottom" visible="true" width="70.017578125" x="4.0" xml:space="preserve" y="4.0">MainClass
 (ROS Node)</y:NodeLabel>
               <y:Shape type="roundrectangle"/>
             </y:ShapeNode>
@@ -1432,9 +1419,9 @@
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="2187.5" y="762.5"/>
-            <y:Point x="1668.3309602075724" y="690.601739130435"/>
-            <y:Point x="974.9999999999999" y="690.601739130435"/>
+            <y:Point x="2150.0" y="700.0"/>
+            <y:Point x="2150.0" y="687.5"/>
+            <y:Point x="974.9999999999999" y="687.5"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="delta"/>
