@@ -12,7 +12,6 @@ Die Aufgabe dieser Klasse ist es, einen Wert vom Typ \CodeClass{Value} für eine
 \end{itemize}
 
 
-\missing[evtl Bild?? Dann auch mit Verweis auf die jeweiligen Basis-Klassen (URI)]
 \href{https://github.com/MobMonRob/ROSLabDrohne/blob/979c6057922852eac0af20a52e29393d41adfee5/Code/Controller/include/Controller/Input.h}{Link: Controller/Input.h}
 
 
@@ -41,6 +40,7 @@ Die Klasse \CodeClass{SafetyProvider} soll sicherstellen, dass der Flug der Droh
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/OpenClose.png}{Image-Link}\\
 Die Klassen in \refImgShort{fig:OC} entsprechen der Anordnung der Vorlesungsfolien \glqq Programming Principles\grqq (Seite 18).
 \end{figure}
 
@@ -52,12 +52,14 @@ Beispiel:\\
 Die in \refCap{MusterBridge} beschriebene Brücke bedient sich der Kovarianz.\\
 Es werden Pointer auf Typen in Attributen gespeichert, welche als von diesen Typen abgeleiteten Klassen Instanziiert werden.
 
-\missing[zweites Beispiel?]
 
 
 \newSec[PrincSOLIDInter]{Interface Segregation Principle}{3}
+Wird das \textit{Interface Segregation Principle} umgesetzt, wird der Weg zu \textit{DRY} (siehe \refCap{PrincDRY}) geebnet und eine hohe \textit{Kohäsion} (siehe \refCap{PrincGRASPKohä}) erreicht. Zudem lässt es auf die Umsetzung des \textit{Single Responsibility Principle} (siehe \refCap{PrincSOLIDSingle}) schließen.
+Ist ein Projekt ausreichend im Voraus geplant, kann dieses Prinzip deutliche Unterstützung leisten. Für kleinere Projekte, welchen kaum Zeit zugesprochen wird, ist eine entsprechend lange Planung hinderlicht. Es entsteht tendenziell schlechterer Code.
+
 Beispiel im Code:\\
-Die Klasse \CodeClass{ControlledOutput} setzt sich unmittelbar aus de beiden \textit{virtual} Klasse (\CodeClass{Output} und \CodeClass{Controlable}) zusammen (siehe \refImg{fig:ISP}). Hierdurch wird eine höhere Granularität erreicht.
+Die \CodeClass{ControlledOutput} setzt sich unmittelbar aus den beiden \textit{virtual} Klassen (\CodeClass{Output} und \CodeClass{Controlable}) zusammen (siehe \refImg{fig:ISP}). Hierdurch wird eine höhere Granularität erreicht.
 
 \begin{figure}[ht!]
 \vspace{0.25cm}
@@ -68,10 +70,13 @@ Die Klasse \CodeClass{ControlledOutput} setzt sich unmittelbar aus de beiden \te
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/InterfaceSegregation.png}{Image-Link}
 \end{figure}
 
 
 \newSec[PrincSOLIDDep]{Dependency Inversion Principle}{3}
+Eine \textit{Dependency Inversion} ermöglicht eine Veränderung von Programmteilen, ohne den Kern der Anwendung (\textit{Application Layer}) anpassen zu müssen. Ermöglicht wird dies mittels virutellen Klassen\footnotemark[1], welche die im Kern benötigte Grundfunktionalität deklarieren. Die Implementierung findet in der vom Interface erbenden Klasse statt.
+
 Beispiel im Code:\\
-\CodeClass{IMUable} besitzt als Attribut einen Pointer auf \CodeClass{PoseBuildable}, welch von \CodeClass{PoseBuilder} implementiert wird (siehe \refImg{fig:Arch}). Eine Instanz der \CodeClass{PoseBuilder} wird von der Instanz der \CodeClass{MainClass} instanziiert und an die Instanz der \CodeClass{IMUable} übergeben.
+\CodeClass{IMUable} besitzt als Attribut einen Pointer auf \CodeClass{PoseBuildable}, welch von der \CodeClass{PoseBuilder} implementiert wird (siehe \refImg{fig:Arch}). Eine Instanz der \CodeClass{PoseBuilder} wird von der Instanz der \CodeClass{MainClass} instanziiert und an die Instanz der \CodeClass{IMUable} übergeben.
 

@@ -36,6 +36,7 @@ Als Nachweis über das Vorhandensein der Unit-Tests soll an dieser Stelle ein Ve
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/Test\%20Result.png}{Image-Link}
 \end{figure}
 
 
@@ -51,6 +52,7 @@ Der allgemeine Aufbau eines Unit-Tests, wie er auch in diesem Projekt angewandt 
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/Test\%20AAA.png}{Image-Link}\\
 oranger Kasten:	Arrage-Bereich\\
 rosa Kasten: Act-Bereich\\
 grüner Kasten: Assert-Bereich
@@ -71,7 +73,7 @@ Ein Sonderfall ergibt sich für die \textit{Verify}-Phase des Mocks innerhalb de
 \newSec[TestUnitATRIP]{ATRIP-Regeln}{3}
 \newSec[TestUnitATRIPAuto]{Automatic}{4}
 Um diese Eigenschaft zu gewährleisten, wurden Parameter \textit{hard coded} in die Tests eingeführt (keine manuellen Interaktionen).
-Im betrachteten Code war negativ-Beispiel auffindbar.
+Im betrachteten Code war kein negativ-Beispiel auffindbar.
 
 
 \newSec[TestUnitATRIPThor]{Thorough}{4}
@@ -124,6 +126,7 @@ Die Auswertung des Tools beschränkt sich auf \textit{Line Coverage} und beschre
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/CodeCoverage.png}{Image-Link}\\
 Der Report beschreibt den \textit{Coverage}-Bestimmung für das \textit{Domain}-Package. Die Tests sind paketweise getrennt.\\
 Die getesteten Zeilen werden in den Dateien grün, die ungetesteten rot, eingefärbt.\\
 Im Report werden alle von diesem Testlauf berührten Dateien aufgelistet. Die Einfärbung der Dateien im Report ist abhängig von der prozentualen Test-Abdeckung. 
@@ -132,6 +135,15 @@ In \refImgShort{fig:Cover}
 
 Durchführung der Bestimmung der Testabdeckung auf folgendem Commit:\\
 \Commit{83c6ff44f67ce1185056a88f00b23e00833a60fb}
+
+
+\newSec[TestCoverInterpr]{Interpretation}{4}
+Es zeigt sich in \refImg{fig:Cover}, dass für manche Klassen (\zB: \CodeClass{TimedValue} und \CodeClass{Vector3D}) keine oder nicht ausreichend Unit-Tests zur Verfügung stehen.
+
+Ferner ist die Auswertung der \textit{Branch Coverage} zu bevorzugen, da diese Grenzfälle betrachtet. So kann eine Methode, welche eine Wächter-Bedingung beinhaltet, eine hohe Abdeckung in der \textit{Line Coverage}-Auswertung erhalten, wobei die \textit{Branch Coverage} 50\% beträgt, wenn ausschließlich der \textit{Happy Path} geprüft wird.
+
+In einem produktiven Projekt sollte allgemein eine hohe Testabdeckung gewährleistet sein und hier besonders Grenzbedingungen (\textit{Boundary Value Analysis}) oder Fehlerzustände (\textit{Angry Path}) geprüft werden. Denn: \textit{Happy Path können alle ;)}.
+
 
 
 \newSec[TDD]{TDD}{2}

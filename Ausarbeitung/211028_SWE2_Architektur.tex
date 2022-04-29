@@ -16,6 +16,7 @@ Wie in \refImg{fig:ArchPkg} zu sehen, zeigen alle Abhängigkeiten in die gleiche
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/Architecture\%20Blocks.png}{Image-Link}\\
 \refImgShort{fig:ArchPkg} zeigt das Konzept der Architektur. Die Bedeutungen der Pfeile orientieren sich an UML-Klassendiagrammen. Die Farbgebung unterscheidet die verschiedenen Schichten der \clean: \textit{Domain-Layer} (blau), \textit{Application-Layer} (hellblau), \textit{Adapter-Layer} (grün), \textit{PlugIn-Layer} (hellgrün).
 \end{figure}
 
@@ -32,7 +33,7 @@ Ein detallierteres Verständnis der Interaktion der Klassen soll durch \refImg{f
 \end{center}
 
 \vspace{0.25cm}
-%\refImgShort{fig:Arch} zeigt das Konzept der Architektur.
+\href{https://github.com/MaagMich/SWE2\_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/Clean\%20Architecture.png}{Image-Link}
 \end{figure}
 
 
@@ -72,12 +73,11 @@ Die \CodeClass{StateBuilder} ermöglicht eine Transformation der Informationen d
 Das Framework \ROS\ wurde gezielt in den \textit{PlugIn Layer} aufgenommen, um etwaigen Änderunges dieses Frameworks mit mäßigem Aufwand begegnen zu können.
 \note{\glqq The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it's all open source.\grqq\cite{ROS}}
 
-Des Weiteren wird die vollständige Implementierung der einzusetztendes Drohne, sowie des Controllers im \textit{PlugIn Layer} geführt. Somit ist ein einfacher Austausch möglich.
+Des Weiteren wird die vollständige Implementierung der einzusetztenden Drohne, sowie des Controllers im \textit{PlugIn Layer} geführt. Somit ist ein einfacher Austausch möglich.
 
-
-
-
-
+\newSec[ArchPluginMain]{main() Methode}{4}
+Die \CodeMeth{main()} hat die Aufgabe, die Applikation als Ganzes zusammenzusetzen. Sie muss im \textit{PlugIn Layer} angesiedelt sein, um für das initialisierten des Programms Zugriff auf alle PlugIns zu haben.
+Im Code wird in der \CodeMeth{main()} eine Instanz der \CodeClass{MainClass} instanziiert, welche die eigentliche Aufgabe der \CodeMeth{main()} übernimmt (vgl. \refImg{fig:Arch}). Anschließend wird in der \CodeMeth{main()} die Fluss-Steuerung des \ROS-Eventbusses realisiert (\href{https://github.com/MobMonRob/ROSLabDrohne/blob/603d50c276cbb1a44929cd096f8a4dc1ce6df855/Code/PosControl/src/Main.cpp\#L15}{Link: while(ros::ok()) spinOnce()}).
 
 
 

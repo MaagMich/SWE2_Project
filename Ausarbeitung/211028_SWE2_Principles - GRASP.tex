@@ -10,7 +10,7 @@ Durch polymorphe Methodenaufrufe liegt eine mäßige Kopplung vor. Dies wurde in
 Abgesehen von den genannten Punkten ist der zugrundeliegende Code eher stark gekoppelt, da häufig statische Methodenaufrufe sowie Methodendefinitionen verwendet werden.
 
 
-\newSec[PrincGRASPKopp]{Kohäsion}{3}
+\newSec[PrincGRASPKohä]{Kohäsion}{3}
 An einem Beispiel (siehe \refImg{fig:Cohe}) wird der technische Ansatz dargestellt:\\
 Methoden werden mit Attributen assoziiert und anschließend bewertet, inwiefern die Attribute der Klasse interagieren.
 
@@ -23,6 +23,7 @@ Methoden werden mit Attributen assoziiert und anschließend bewertet, inwiefern 
 \end{center}
 
 \vspace{0.25cm}
+\href{https://github.com/MaagMich/SWE2_Project/blob/c5c3674bd201ee306463881cf711bb2ce9229842/Ausarbeitung/Pictures/Cohesion_IMUable.png}{Image-Link}\\
 In \refImgShort{fig:Cohe} werden Methoden zu Attributen zugeordnet, um den Grad der Kohäsion bestimmen zu können.\\
 Es zeigt sich, dass die \CodeVar{Pose\_} nicht innerhalb der Klasse verwendet wird. Somit könnte dieses Attribut entfernt werden.\\
 Die verbleibenden Attribute sind über Methoden miteinander verbunden und bilden somit eine hohe Kohäsion ab.
